@@ -1,0 +1,4 @@
+uv pip install uvicorn
+uv pip install pydantic
+uv pip install fastapi
+uv pip install jose
