@@ -1,2 +1,5 @@
-pip install streamlit supabase python-dotenv pandas dotenv supabase
-pip install streamlit supabase python-dotenv pandas
+streamlit==1.53.1
+supabase==1.0.0
+python-dotenv==1.0.1
+pandas==2.3.3
+rich>=10.14.0
