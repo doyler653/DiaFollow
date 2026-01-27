@@ -1,4 +1,1 @@
-pip install uvicorn
-pip install pydantic
-pip install fastapi
-pip install jose
+pip install streamlit supabase python-dotenv pandas
