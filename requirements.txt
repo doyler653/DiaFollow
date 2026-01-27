@@ -1,1 +1,1 @@
-pip install streamlit supabase python-dotenv pandas
+pip install streamlit supabase python-dotenv pandas dotenv supabase
