@@ -1,24 +1,8 @@
-from pydantic import BaseModel
-from typing import List
-from datetime import datetime
+import pandas as pd
 
-
-class User(BaseModel):
-    id: int
-    role: str  # "parent" or "doctor"
-
-
-class GlucoseReading(BaseModel):
-    timestamp: datetime
-    value: float
-
-
-class InsulinDose(BaseModel):
-    timestamp: datetime
-    units: float
-
-
-class PatientData(BaseModel):
-    glucose: List[GlucoseReading]
-    insulin: List[InsulinDose]
-    carbs: int
+def df_from_records(records, time_col="time"):
+    if not records:
+        return pd.DataFrame()
+    df = pd.DataFrame(records)
+    df[time_col] = pd.to_datetime(df[time_col])
+    return df.sort_values(time_col)
